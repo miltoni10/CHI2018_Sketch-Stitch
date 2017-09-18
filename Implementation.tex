@@ -1,58 +1,36 @@
 \section{Implementation}
-Sketch\&Stitch captures a sketch on fabric using a mounted camera, converts the design based on color into a sequence of stitches, replaces red Circuit Stickers with embroidery patterns, and implements the design using an embroidery machine.
+Sketch\&Stitch's pipeline begins after the user calibrates her fabric and marker colors. users capture an image of their design on fabric. The design is first localized in the image, processed to reduce noise and enhance color, split into design layers based on a color scheme, fiducial Circuit Stickers are detected and replaced with appropriate patterns, design layers are sent to embroidery software to be digitized, and finally, digital embroidery patterns are sent to embroidery machine to be stitched. 
 
-\subsection{Image processing}
+
+\subsection{Design localization and noise reduction}
+Once an image is captured, the system looks for visual markers on the hoop to calculate its center and orientation, and applies the appropriate cropping mask to extract the design and store it in life-size.
+
+The cropped image is then processed: adjust contrast, reduce colors that have been introduced during capturing, and merge redundant colors, e.g., caused by change in amount of pressure applied on markers, and remove background (a solid color). 
+
+
 %The quality of embroidery depends highly on the quality of the captured image. Factors that affect the quality of an image include camera resolution, light setup and shadows, the flatness and texture of fabric, the quality of markers, and the amount of presser applied to makers while sketching.
 
-Sketch\&Stitch's pipeline begins after users capture a picture of their design on fabric. The system detects visual markings on the hoop to localize user design, rotate it, and crop it to scale. The image is then processed: adjust contrast, reduce colors that have been introduced during capturing based on area size, merge redundant colors caused by change of amount of pressure applied on markers while drawing, and remove background (a solid color). Once the image is processed, the system applies color filtering.
 
 
-The system stores the user’s design in four layers: the bottom layer contains conductive stitches for circuit traces and sensors. The second layer contains non-conductive stitches for insulating selected circuit traces. The third layer contains non-conductive stitches for art pattern. The top layer contain conductive stitches for circuit bridges. 
+\subsection{Color filtering and marker detection}
+Next, the system performs color filtering based on a predefined color scheme (HSV model) to split the design into multiple layers. In our implementation we used OpenCV libraries for image processing and marker recognition. 
+%ArUco
 
+First, we filter for Circuit Stickers' colors (black and white). Our stickers only use one fiducial marker to signify a circuit bridge. The system looks for fiducial markers and replaces them with the bridge's three layer design. Black and white objects are then filtered out and are not part of the embroidery stack.
 
-\subsection{Color filtering}
-Sketch\&Stitch defines a color scheme to convert users' designs into embroidery patterns. The scheme is composes of seven colors (black, white, green, red, pink, purple, dark purple). Each color is dedicated for one kind of user-system communication. 
-%and should not be used for other purposes in the design. 
-Below we describe how the system processes each color:
+Second, we filters for insulation color (blue). Green objects are duplicated and stored in two layers.
 
+Third, we filter for circuit traces and sensors (purple). Blue objects include traces, hand-sketched sensors, and sensor stickers. Based on the marker tip, we reduce the thickness of traces in order to force embroidery software to treat them as outlines, as opposed to closed shapes that need to be filled. This step avoids stitching thick conductive traces, which wastes a lot of thread and makes them more visible in the final design.
 
+Forth, we filter art markings (pink). We keep the thickness of these markings untouched.
 
-\begin{enumerate}
-\item{Mask hardware stickers (black and white):} Black and white stickers, which represent hardware components, are masked out from the design by filtering for their colors. These stickers only serve as placeholders and are not part of the embroidery.
-%What remains is the extension of conductive traces inside the sticker grooves. These extensions compose contact or attachment areas for components after embroidery.
+The system ignores all others color. This features allows it to filter out thread colors during incremental design. Consequently, colors blue, purple, and pink should be preserved for sketching and not used as thread colors. 
+%One limitation of this technique is that it doesn't allow users to color their designs during sketching or embroidery.
 
-\item{Generate insulation (green):} Green markings are duplicated and stored in two layers: bottom layer for conductive stitches, and top layer for insulation stitches.
+The system creates the embroidery stack: bottom layer contains purple objects (circuit traces and sensors), second layer contains blue objects (insulation), third layer contains pink objects (art pattern), top layer contains circuit bridges.
 
-\item{Create special embroidery patterns (red):}
-Red stickers, which represent bridges and sensors, include a fiducial marker. It is used at the crossing point of two conductive traces. The system uses a simple image processing algorithm to locate this marker and replace it with a bridge embroidery pattern. 
-
-The bridge embroidery pattern is composed of three layers: bottom layer contains conductive stitches to connect the horizontal trace, middle layer contains insulation stitches to insulate the horizontal trace at the crossing point, and top layer has a bridge stitch to connect the vertical trace over the insulation.
-
-In sensor sticker, the red shapes and lines are stored in a layer of conductive stitches.
-
-\item{Separate circuit pattern (purple):} All purple markings, including traces, contact points, and hand-sketched sensors are stored in a single layer of conductive stitches. 
-
-\item{Separate art pattern (pink):} All pink markings are stored in a single layer of non-conductive stitches.  
-
-\item{Other colors:} Markings of colors outside the color scheme are each stored in a separate layer of non-co pink markings are stored in a single layer of non-conductive stitches.  
-
-\end{enumerate}
-
-Parts of design that share a common color are stored in a single design layer: circuit pattern, conductive layer of insulation, and conductive bottom layer of special embroider patters are all combined in a single layer that is sequenced to be executed first. Art pattern, non-conductive layer of insulation, and non-conductive layer of special embroider patters are combined into layers of shared colors and scheduled to be embroider next. Finally, the top conductive layers of special embroidery patterns are combined to a single layer, scheduled to be embroidered last. The schedule aims to reduce the number of times the user has to switch threads in the embroidery machine. Once the layers are created, they are sent to the embroidery software for digitizing them into embroidery patterns.
-
-\subsection{Stitch Selecting}
-Our system assigns a specific type of stitch for each layer based on the color schema: Green or insulation is done using a zigzag stitch (). Purple is stitched using triple run stitch () for lines, and step stitch () for fillings. Dark purple or bridges are stitched using a single run stitch (). Pink or art pattern is stitched using satin line and satin fill stitches.
-
-
-% \subsection{Embroidering}
-% Conductive layer: bridge stitches
-% Non-conductive layers: all lines of colors outside the system's scheme 
-% Non-conductive layer: insulation 
-% Conductive layer: traces and sensors
-
-
-% \nur{We use step stitch instead of stain to reduce the amount of conductive thread used to fill a shape.}
-
+\subsection{Stitch Mapping and Embroidering}
+Our system matches stitch types to embroidery stack as follows: triple running stitch (2 mm length) for circuit traces and sensors, zigzag stitch (2.0 mm width, 0.3 mm spacing) for insulation, satin stitch (2.0 mm width, 0.5 mm spacing) for art pattern, and single running stitch (9 mm length) for bridge stitch. Embroidery software converts the stack into layers of embroidery patterns. The system send these patterns to an embroidery machine via a wireless connection. 
 
 
 
