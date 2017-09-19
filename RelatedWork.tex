@@ -1,14 +1,14 @@
 \section{Related Work}
-This paper builds on research in e-textiles fabrication techniques and interactive fabrication.
+This paper builds on research in e-textile fabrication techniques and interactive personal fabrication.
 
 \subsection{Fabrication Techniques for E-Textiles}
-E-textile research investigates combining electronics with textiles to create soft flexible interfaces in ubiquitous objects such as clothing, furniture, and toys \cite{Buechley2009}. An important area of e-textile research examines the practical issues associated with creating fabric circuits.
+E-textile research investigates combining electronics with textiles to create soft flexible interfaces in ubiquitous objects such as clothing, furniture, and toys \cite{Buechley2009}. A key challenge in this area is creating fabric circuits.
 %Fabric circuits are the infrastructure of e-textiles.
 %Related to wearable computing 
 %Physical interfaces 
 %Pervasive fabric artifacts
 %combines the strengths and capabilities of electronics and textiles
-
+% 
 %%%%%% APPLICATIONS
 %E-textile applications in research and industry demonstrate the potential to provide sensing and interactive functionality in a form factor that comfortable, flexible, and inconspicuous.
 %personal monitoring applications: military \cite{park2002wearable}, medicine \cite{pacelli2006sensing}, and sports \cite{holleczek2010textile}.
@@ -18,22 +18,22 @@ E-textile research investigates combining electronics with textiles to create so
 %Other applications are more playful, aesthetics-driven and fashion related \cite{berzowska2005electronic,CuteCircuit,wakita2006mosaic}
 %textile lamps and dimmers: http://www.ifmachines.com/
 %Polar’s breast strap heart rate monitor is to be mentioned. The usual rubber band around the body has now been replaced by a conductive textile ribbon. The second group includes products like the MET5 jackets by The North Face, an electrical heating for the wearer’s body, or the music playing jackets by InteractiveWear.
-
-
+% 
+% 
 %ON THE FIBER STRUCTURE (Materials) Assessment of conductive materials for e-textiles
 % describes the desirable characteristics of piezoelectric materials for wearable e-textiles, including shape sensing, sound detection, and sound emission. The paper then describes an initial prototype of a glove for user input that employs piezoelectrics to sense the movement of the hands  \cite{edmison2002using}
 %foam based sensor for use in body-monitoring for context aware and gestural interfaces, low precision can only detect the presence of movement events \cite{dunne2006garment}
 % Electrical Characterization of Textile Transmission Lines woven \cite{cottet2003electrical}
 %Defining Flexibility and Sewability in Conductive Yarns \cite{orth2002defining}
-
-
+% 
+% 
 %Transistor materials towards entirely fabric-based computation
 %Woven transistors \cite{hamedi2007towards}, similar work: \cite{lee2005weave} and \cite{bonfiglio2005organic}
-
-
-Fabric circuits are made of conductive traces integrated into fabric to interconnect electrical elements to form a functional system. The electrical elements, such as sensors, actuators, transistors, power sources, can be (off-the-shelf) hardware or textile-based. Research into the creation of transistors and other components on fibers toward fully integrated fabric circuits is ongoing \cite{schwarz2010steps}. 
+% 
+% 
+These circuits are made of conductive traces integrated into fabric to interconnect electrical elements to form a functional system. Ultimately, these electrical elements, such as sensors, actuators, transistors, power sources, etc., may become textile-based themselves. Research into the creation of transistors and other components directly on fibers, toward fully integrated fabric circuits, is ongoing \cite{schwarz2010steps}. 
 %fabric-based electrical devices
-To enable the creation of e-textiles today, researchers have focused on developing techniques for creating fabric circuits and attaching hardware electrical components and circuit boards. 
+To enable the creation of e-textiles today, researchers have focused on developing techniques for creating fabric circuits that connect off-the-shelf hardware, usually mounted on printed circuit boards (PCBs).
 %flexible multi-chip modules, fabric-based antennas, and fabric-based sensors and sensor systems. Achieving electrical switching, transistors on fibers or thin films that could eventually be integrated into fabrics to form integrated circuits.
 
 % the development of fabric-based electrical circuits, a critical component for the evolution of fully integrated electronic textiles with transistors and integrated circuits, sensors and other electronic devices built into the textile structures.
@@ -47,14 +47,14 @@ To enable the creation of e-textiles today, researchers have focused on developi
 
 
 
-The primary e-textile fabrication techniques are embroidery, weaving and knitting, and coating. 
-Coating techniques include silk screening and sputtering \cite{kim2010electrical}, ink-jet printing \cite{stempien2017shape} among others (cf. \cite{castano2014smart}). %electrodeposition, electroless plating, vapor deposition, and thermoset coatings. 
-Most of these techniques require special tools such as a vacuum chamber, regulated temperatures, or the use of chemical etching agents. 
+The primary e-textile fabrication techniques are coating, weaving, knitting, and embroidery.
+Coating techniques include silk screening and sputtering \cite{kim2010electrical}, ink-jet printing \cite{stempien2017shape} and others  \cite{castano2014smart}. %electrodeposition, electroless plating, vapor deposition, and thermoset coatings. 
+Most of these require special tools and processes such as a vacuum chamber, regulated temperatures, or chemical etching agents. 
 %use of an etching agent for forming a circuit pattern leads to non-uniform etching, as some of the etching liquid is absorbed by the threads of the underlying substrate fabric.
-Moreover, coating inks, polymers and solutions alters fabric flexibility \cite{farboodmanesh2005effect}. 
-Printed conductive lines are prone to cracking when bent which leads to discontinuities in conductivity. 
+Moreover, coating inks, polymers and solutions alter fabric flexibility \cite{farboodmanesh2005effect}. 
+Printed conductive lines are prone to cracking when bent, impeding conductivity. 
 %This problem also exists in printed electrical circuits as conductive materials such as inks or pastes with metallic particles 
-Ongoing research looks at making printed conductive traces more tolerate to bending, washing and dry cleaning \cite{yang2013waterproof,stempien2017shape}.
+Research into making printed conductive traces more tolerant to bending, washing, and dry cleaning is ongoing \cite{yang2013waterproof,stempien2017shape}.
 %silk screening, where an adhesive conductive ink is applied to the open areas of a mesh reinforced stencil allowing the ink to pass through the mesh onto the substrate fabric
 
 %sputtering, is used to form high resolution (micrometer scale) circuits on fabric. The fabric, kept at 150 ◦ C, needs to be placed in a vacuum chamber with an inert gas like argon and needs a shadow mask to form the circuit patterns
@@ -63,25 +63,27 @@ Ongoing research looks at making printed conductive traces more tolerate to bend
 
 
 %Conductive thread maintains the flexibility of the base fabric and endures movement, bending and flexing \cite{castano2014smart}.
-Weaving \cite{bonderover2004woven,dhawan2004woven1, dhawan2004woven2} and knitting \cite{farringdon1999wearable} integrate conductive yarn during fabric making.  Weaving is the most common technique for e-textile manufacturing \cite{nakad2007using}. 
-%Weaving is cost effective, quick and can be used for large areas (embroidery for relatively smaller areas).
-A jacquard weaving machine controller can read a circuit design and create complicated woven patterns on fabrics with high precision in an automated manner \cite{poupyrev2016project}. Weaving places mild forces on the yarns and a much wider range of yarns can be used successfully in a loom than in an embroidery machine.
+Weaving \cite{bonderover2004woven,dhawan2004woven1, dhawan2004woven2} and knitting \cite{farringdon1999wearable} integrate conductive yarn during fabric production.
+Weaving is the most common technique for e-textile manufacturing \cite{nakad2007using}. It is cost effective, quick, and can be used for large areas
+% (embroidery for relatively smaller areas).
+A Jaqcuard weaving machine can read a circuit design and create complicated woven patterns on fabric with high precision in an automated manner \cite{poupyrev2016project}. Weaving applies only low forces to the yarn, and a much wider range of yarns can be used successfully in a Jacquard loom than in an embroidery machine.
 % Weaving though does have the advantage that it can create a two layer electrical design. Furthermore weaving is least demanding on the thread stability.
-However, jacquard looms are not as accessible as embroidery machines for end users, and setting them up for creating circuit patterns requires skill and labor \cite{linz2008embroidered}. While knitting textile production technique has not been used to create fabric circuit, researchers demonstrated knitted circuit elements (resistors, inducators, and capacitors) \cite{wijesiriwardana2004fibre} and stretch sensors \cite{paradiso2005wearable} using conductive and piezoresistive yarns. 
+However, Jacquard looms are much less accessible for end users than embroidery machines, and setting them up to create circuit patterns requires significant skills and labor \cite{linz2008embroidered}. While knitting has not been used to produce fabric circuits at scale, researchers have created knitted circuit elements such as resistors, inductors, and capacitors \cite{wijesiriwardana2004fibre} as well as stretch sensors \cite{paradiso2005wearable} using conductive and piezoresistive yarns. 
 % In knitted materials, the threads – and also conductive threads – take many loops rather than the shortest distance between two points. This causes a larger resistance of knitted wiring compared to woven or embroidered wiring.
 %For example, \cite{wijesiriwardana2004fibre} constructed resistive, inductive and capacitive transducers with electronic flatbed knitting technology.
 %Dhawan et al. \cite{dhawan2004woven1, dhawan2004woven2}. solved crisscrossing in woven fabric circuits. Different techniques can be employed to form crossover point interconnections like resistance welding, adhesive bonding, air splicing, and soldering.
 
 
-Embroidery is a textile  embellishment technique in which strands of thread are stitched  on fabric surface. Embroidery can be manual or numeric. An advantage of embroidery machines is that they can create nearly arbitrary patterns on woven, non-woven, and knitted fabric including tailored textile or garment. Embroidery machines require less machine preparation than weaving looms.
-One can envision using an embroidery machine to create the fabric equivalent of a printed circuit board. 
+Embroidery is a textile  embellishment technique in which strands of thread are stitched onto a fabric surface. Embroidery can be manual or numeric. An advantage of embroidery machines is that they can create nearly arbitrary patterns on woven, non-woven, and knitteds fabrics, including tailored textiles and garments. Embroidery machines require less machine preparation than weaving looms.
+One can envision using an embroidery machine to create the fabric equivalent of a PCB. 
 Post and Orth \cite{5387040} pioneered stitching and embroidering conductive thread to create resistors, capacitors, data and power busses, and capacitive keypads. 
 %keypads on a garment using silk organza fibers with a thin metal strand as the conductive fiber
 Other researchers demonstrated the embroidery of touch sensors \cite{zeagler2012textile, roh2014textile,hamdan2016grabbing}, stretch sensors \cite{vogl2017stretcheband}, and antennas \cite{brechet2017cost}. Gowrishankar et al. \cite{Gowrishankar:2013:PRE:2493988.2494341} created a repository of embroidery pattern motifs
-with different resistance values that can be easily incorporated into embroidery projects and used instead of normal resistors. Forster Rohner\footnote{Forster Rohner. Illuminated Textiles. http://www.frti.ch/en/technology/illuminated-textiles.html}
-developed a commercial manufacturing method for embroidering circuit traces traces and attaching LEDs on fabric. 
+with different resistance values that can be easily incorporated into embroidery projects and used instead of normal resistors. Swiss company Forster Rohner\footnote{www.frti.ch/en/technologie-2/#tab-1496914209772-3-3}
+developed a commercial manufacturing method for embroidering circuit traces and attaching LEDs to fabric. 
 %Further, stitched traces can be easily electrically isolated from traces on the opposite side of the fabric [E-Textiles in the Apparel Factory: Leveraging Cut-And-Sew Technology Toward the Next Generation of Smart Garments], enabling multi-layer circuits [Multi-Layer E-Textile Circuits].
-In this paper we use an embroidery machine to create fabric circuits and embedded embroidery patterns of touch sensors, insulation, and bridges for crossing traces. 
+We use an embroidery machine to enable end users to create fabric circuits and embed embroidery patterns of touch sensors and circuit traces shielding.
+
 %Midas: Fabricating Custom Capacitive Touch Sensors to Prototype Interactive Objects (users define electrical connections)
 %Disadvantages include operation being limited to a relatively small area, expensive operation relative to other textile processes, and limitations on the type and size of fiber that can be effectively used in embroidery machines.
 
@@ -89,32 +91,28 @@ In this paper we use an embroidery machine to create fabric circuits and embedde
 
 
 
-Buechley et al. \cite{Buechley2009} led the efforts of developing e-textile fabrication techniques that are accessible to a broader audience. Their goal is to diversify technology by including artists, designers, crafters and makers as well as use e-textiles as a platform for motivating STEM education. The authors described a technique that uses a laser cutter to cut conductive fabric with iron-on backing and create fabric PCBs. However, this technique is not durable for longtime usage and washing. They also described three techniques for insulating conductive threads and fabrics: couching---stitching one thread over another---, iron-on of non-conductive insulator, and puffy fabric paint. Hannah Perner-Wilson and Mika Satomi \cite{perner2011handcrafting} explored different craft techniques such as knitting to make sensors from soft materials (conductive threads and fabrics). Peng et al. \cite{peng2015layered} demonstrated the use of an adapted laser cutter for creating 3D textiles with embedded conductive fabric.
+Buechley et al.\ \cite{Buechley2009} have led the efforts of developing e-textile fabrication techniques that are accessible to a broader audience. Their goal is to diversify technology by including artists, designers, crafters and makers, and to use e-textiles as a platform for motivating STEM education. The authors use a laser cutter on conductive fabric with iron-on backing to create fabric PCBs. However, the resulting circuits are not durable enough for washing and extended use. They also describe three techniques to insulate conductive threads and fabrics: couching---stitching one thread over another---, ironing-on a non-conductive insulator, and puffy fabric paint. Perner-Wilson and Satomi \cite{perner2011handcrafting} explore different crafting techniques such as knitting to make sensors from soft conductive threads and fabrics. Peng et al.\  \cite{peng2015layered} use an adapted laser cutter to create 3D textiles with embedded conductive fabric.
 
 
 
 
 
-Attachment of electronic devices to fabric circuits poses numerous challenges in the field of e-textiles. 
+Once a fabric circuits has been created, the second key challenge is attaching electronic components and PCBs to it.
 %Devices that may be attached to the conductive elements of a textile fabric include rigid and flexible circuit boards, multi-chip modules and individual integrated circuit packages. 
 %It is desirable that individual chip packages be directly connected or bonded to conductive elements of a fabric, so as to form a more flexible and conformable electronic textile. 
 %The accessibility, durability of these techniques and integrating electronic modules, interconnections or connectors in a manner that preserves the fabric's textile character. reliability of electronics, textile conductors and connections in textile while washing, draping, stretching, wearing, etc.
-The attachment of these devices could be carried out either by using physical contact such ribbon cable connectors \cite{lehn2004tags}, gripper snaps \cite{5387040}, electronic sequence and socket buttons \cite{Buechley2009}. Reflow soldering technique was used to attach surface-mounted LEDs to a solderable conductive yarn \cite{Berglund:2015:SCA:2802083.2808413, Molla:2017:SME:3123021.3123058}. Linz et al. \cite{linz2012contacting} investigated attaching  components to a textile using non-conductive adhesive and pressure to displace the adhesive from between the component leads and the textile conductor. Linz et al. \cite{linz2005embroidering} also investigated embroidery as a means for interconnecting conductive yarn with flexible electronics modules. Arduino LilyPad \cite{4487082} and Flora\footnote{https://www.adafruit.com/flora} are commercial wearable electronics kits that includes common electrical components attached to PCB boards with pin holes suitable for needlework and exposed conductive pads on the top and bottom the PCB. In this paper we use embroidery to create the contact area for electronics on fabric and describe techniques for attaching the LilyPad kit. 
+Physical connection options include ribbon cable connectors \cite{lehn2004tags}, gripper snaps \cite{5387040}, and electronic sequins and socket buttons \cite{Buechley2009}. Reflow soldering can attach surface-mounted LEDs to a solderable conductive yarn \cite{Berglund:2015:SCA:2802083.2808413, Molla:2017:SME:3123021.3123058}. Applying pressure can displace a non-conductive adhesive from between component leads and the textile conductor \cite{linz2012contacting}, and embroidery has also been used to connect flexible electronics modules with conductive yarn \cite{linz2005embroidering}. Arduino LilyPad \cite{4487082} and Flora\footnote{www.adafruit.com/flora} are commercial wearable electronics kits that include common electrical components attached to small PCBs with connector holes suitable for needlework and exposed conductive pads on the top and bottom of the PCB. We use embroidery to create the contact areas for electronics on fabric, and describe techniques for attaching parts from the LilyPad kit as an example.
 %To halve the resistance of a conductive thread, they used it as top and as bobbin thread.
 %heat (speed) degrades the conductivity of the silver coated threads
 %\cite{linz2005embroidering} demonstrated how a thin electronic substrate (flex substrate) can be attached to fabric the needle punches and  goes through metalized contact pad. Pre-punched pad created loose stitches. Also packing of the module.
 % the needle stitches through a metalized contact pad. Hereby the conductive top thread builds a loop over the conductive pad. The tighter this loop is the better is the contact. 
 
 
-Wearable construction kits such as Quilt Snap \cite{buechley2005quilt}, EduWear \cite{katterfeldt2009eduwear}, TeeBoard \cite{ngai2009teeboard}, i*Catch \cite{ngai2010catch}, fabrickit\footnote{http://www.fabrick.it/index.html}, and Makerwear \cite{kazemitabaar2017makerwear}, abstract low level electronics and provide plug-and-play electronics modules and graphical programming interfaces to lower the barriers to e-textile creation. They provide custom solutions for creating fabric circuits and attaching electronics. These kits mainly target young adults and children. 
+Wearable construction kits such as Quilt Snap \cite{buechley2005quilt}, EduWear \cite{katterfeldt2009eduwear}, TeeBoard \cite{ngai2009teeboard}, i*Catch \cite{ngai2010catch}, fabrickit\footnote{www.fabrick.it}, and Makerwear \cite{kazemitabaar2017makerwear} abstract from low-level electronics and provide plug-and-play electronic modules and graphical programming environments to lower the barriers to e-textile creation. They provide custom solutions for creating fabric circuits and attaching electronics. These kits mainly target children and young adults.
 %Digital-physical construction kits, such as Electronics Blocks, Cubelets, and littleBit, enable tangible programming using modular electronics with constraints on how they connect to each other to help users always achieve functional constructions.
 %These kits are comprised of electronics models that can be combined to create complex interactive behviours. 
 
 
-
-
-
-%Considerable effort was spentmanuallydesigningcircuitsandfiguringout the proper scaling to create pads on fabric that match up with packages. We spent that time in designing the stickers. significant work required to use an embroidery CAD softwarepackagetocreatevalidandrepeatable circuits on the sewing machine. Add his to the into of conductive embroidery patterns that serve as contact areas and senosrs
 
 
 
@@ -125,11 +123,11 @@ Wearable construction kits such as Quilt Snap \cite{buechley2005quilt}, EduWear 
 
 
 
-\subsection{Personal and Interactive Fabrication}
-Interactive fabrication is a method of integrating design and digital fabrication into a single process to recapture the creative possibilities of direct making \cite{willis2011interactive}. Interactive systems replace computer screens and design software with direct physical interactions with the workpiece. They track users' gestures, digitize them, and transfer them to digital fabrication tools in `almost` real-time manner. Several systems have been developed for milling, 3D printing, and laser cutting user defined objects based on tangible input. For example, Shaper \cite{willis2011interactive} allows users to create foam sculptures via gesturing on a transparent touch screen situated on top of the foam and milling machine. CopyCAD \cite{follmer2010copycad} allows uses to copy the shape of exiting physical objects and replicate them with a milling machine. Tactum \cite{gannon2015tactum} tracks users finger while sketching on their forearm to model printable 3D arm casts. Constructables \cite{mueller2012interactive} uses constrain based tools to sketch over the transparent enclosing window of a laser cutter to create precise artifacts.
-
-
-Systems that use sticker markers as part of the physical interaction language between the user and the machine include Makers' Marks \cite{savage2015makers}, a system that allows users to create complex physical objects that incorporate elements such as hinges, parting lines and electronics using sculpting material and stickers for annotation. Kikuchi et al. \cite{Kikuchi:2016:MML:2839462.2856549} use stickers to mark cutting shapes on a physical workpiece for the laser cutter. Sketch\&Stitch takes inspiration form this line of research, using Circuit Stickers to annotate special circuit elements that the user wants to be embed in fabric.
+\subsection{Interactive Personal Fabrication}
+Interactive fabrication is a method of integrating design and digital fabrication into a single process to recapture the creative possibilities of direct making \cite{willis2011interactive}. Interactive systems replace computer screens and design software with direct physical interactions with the workpiece. They track users' gestures, digitize them, and transfer them to digital fabrication tools in `almost real time'. Several systems have been developed for milling, 3D printing, and laser cutting user defined objects based on tangible input. For example, Shaper \cite{willis2011interactive} lets users create foam sculptures using gestures on a transparent touch screen on top of the foam and milling machine. %CopyCAD \cite{follmer2010copycad} lets users copy the shape of a physical object and replicate it with a milling machine. 
+With Tactum \cite{gannon2015tactum}, users sketch with their finger on their forearm to model printable 3D arm casts. Constructables \cite{mueller2012interactive} uses constraint-based tools to sketch over the transparent enclosing window of a laser cutter to create precise artifacts. Makers' Marks \cite{savage2015makers} lets users create complex physical objects with hinges, parting lines, and electronics stickers to annotate sculpting material.
+%Kikuchi et al. \cite{Kikuchi:2016:MML:2839462.2856549} use stickers to mark cutting shapes on a physical workpiece for the laser cutter. 
+Sketch\&Stitch takes inspiration from this line of research, using Circuit Stickers to annotate special circuit elements that the user wants to embed in the design.
 
 
 %Gesture-based interfaces such as SpaitialSketch and FurnitureFactory 
