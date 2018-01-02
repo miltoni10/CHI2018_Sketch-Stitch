@@ -1,0 +1,372 @@
+------------------------ Submission 1538, Review 4 ------------------------
+
+Title: Sketch&Stitch: Interactive Embroidery for E-textiles
+
+Reviewer:           AC
+
+Expertise
+
+   3  (Knowledgeable)
+
+Recommendation
+
+    . . . Between neutral and possibly accept; 3.5
+
+Award Nomination
+
+   If accepted, this paper would not be among the top 20% of papers presented at CHI
+
+1AC: The Meta-Review
+
+   This paper presents an interactive embroidery system. The paper has a
+   detailed description of different components of the system and
+   well-written.
+
+   In terms of contribution, I agree with the R3 that the overall system
+   integration and approach has the potential. There are several issues that
+   reviewers, especially R2, has pointed out and I encourage authors to
+   address them in the rebuttal
+
+
+   Missing Technical Details:
+   As R2 suggested, “there is almost no description about the software
+   interface or much about how the user can interact with it” What’s the
+   User Interface look like? How do the users interact with it? Given the
+   very detailed description of rest of the components, I would expect this
+   details or hear why those were omitted.
+
+   Evidence of the system is actually functional:
+   In addition, video or the images in the paper doesn’t show the state of
+   the textiles produced by the artist. There were no images of embroidery
+   stickers or the real usage of them shown (R2). I wonder if the system is
+   able to create e-textile that is functional. If not, what are the
+   limitations? If it works, as R3 indicated, can you provide examples of
+   how the system realized the various stitching patterns and techniques
+   discussed in the paper.
+
+   The space for this opens up if you remove Figure 7 (contains the same
+   info in Figure 1) and merging the important points of ‘Adding
+   Interactivity’ section with ‘Example Applications’ (R2).
+
+   User Interaction:
+   The paper has great details on attaching various electronic components
+   and creating inputs. However, no details on how an artist/non-expert user
+   would program the behavior he/she wanted. Do the authors offer some sort
+   of protocol, API, etc.? (R1).
+
+   Validation with  1 user:
+   This an interaction technique. So naturally one would expect a user study
+   with multiple users. Why was this not done? Even the single user who
+   tested the system claimed, “fabric is not a good medium for
+   doodling”. As R1 indicated “it raises the question if sketch input on
+   the output fabric is ultimately the right technique”. How do you draw
+   generalizable conclusions with just one user? This is not even mentioned
+   as major point in the limitations section, which I think authors should
+   have done (at least)
+
+
+   Minor
+   Consider changing the term ‘Circuit Stickers’ (R2).
+   Relevant reference: https://dl.acm.org/citation.cfm?doid=2686612.2686691
+
+
+   Overall, I am on the fence leaning towards the positive side. However,
+   the final verdict depends on how authors react to the above rebuttal
+   points.
+
+Rebuttal response
+
+   (blank)
+
+
+------------------------ Submission 1538, Review 1 ------------------------
+
+Title: Sketch&Stitch: Interactive Embroidery for E-textiles
+
+
+Expertise
+
+   2  (Passing Knowledge)
+
+Recommendation
+
+    . . . Between neutral and possibly accept; 3.5
+
+Award Nomination
+
+   If accepted, this paper would not be among the top 20% of papers presented at CHI
+
+Review
+
+   The authors present a new interactive embroidery system to create
+   e-textiles that integrate electronic components and circuits. The users
+   sketch their intended design for the stitches and use stickers as
+   placeholders for the electronics, which are attached after embroidery.
+
+   I really enjoyed reading the paper, since it is well-structured and very
+   clearly presented. I found the concept to be convincing, because it hides
+   the complexity of design tools from users and make the design process of
+   e-textiles easy and natural. Beyond, I think that the paper fits well
+   with the current DIY and maker spirit, which we currently experience in
+   HCI community. The concept itself is very well thought out, however I
+   missed some details on the technical implementation as well as how users
+   could be instructed with rules and validity checks to avoid for example
+   shorting or damage of the hardware.
+
+   I am not an expert in that field, but I found the related work section
+   very well done, since it provides a good overview and explanation of
+   fabrication of e-textiles.
+
+   The concept with the component stickers during the sketching phase to
+   maintain size and fit connections is smart. Also the idea with the
+   embroidery patterns as placeholder for complex patterns is convincing.
+   However, I would like to see the different input patterns, such as touch
+   slider, resistive button, or touch matrix, to be discussed (and
+   visualized) in the paper in more detail. I would be further interested
+   e.g. how the output of the 4x4 touch matrix performs in terms of
+   resolution and interpolation, or learn about the pressure range of the
+   resistive button.
+
+   The authors pointed out, that a system for validating the sketched input
+   would be needed but referred to it as future work. Indeed I think that
+   such a system would be crucial for such a concept. Especially users that
+   are not so experienced with circuit design will need some guidance and
+   instructions to stick to the rules. For instance I could imagine that the
+   smartphone (or external camera) constantly tracks the sketch and provides
+   some hints and suggestions if there is any problem with the user’s
+   sketch. I would be interested if the authors could provide some more
+   ideas on that perspective.
+
+   For the implementation section, I would expect some more technical depth.
+   It would be great to visualize/explain the different steps of the
+   embroidery stack in a figure. Beyond, I completely missed a discussion
+   how the artists then can use the e.g. input signals captured with the
+   LilyPad. Do the authors offer some sort of protocol, API, etc.? I was
+   also wondering how the authors implemented the readout of the input, such
+   as input from the touchpad, touch sliders and buttons.
+
+   Although the authors conducted an expert study with a single artist, it
+   would have been better to capture multiple qualitative opinions to get a
+   more versatile view onto the concept. That the artist described the
+   fabric to not be a good medium for doodling is a bit alarming, because it
+   raises the question if sketch input on the output fabric is ultimately
+   the right technique for crafting e-textiles (btw: how well does the
+   wiping of strokes of the textile marker with the damp cloth works; are
+   they easy and clean to wipe?). Beyond, some quantitative evaluation about
+   the accuracy of the transformation of sketches to machine patterns would
+   be interesting. Or some performance measures for the input as previously
+   mentioned. Nevertheless, I found it nice that the application examples
+   were actually created by a "user" of the system.
+
+   Summarizing, as I pretty much liked the concept I am positive about the
+   paper. However, I also think that some sections of the paper offer room
+   for improvement. Thus, I would encourage the authors to address my
+   questions and concerns in their rebuttal.
+
+Rebuttal response
+
+   (blank)
+
+
+------------------------ Submission 1538, Review 2 ------------------------
+
+Title: Sketch&Stitch: Interactive Embroidery for E-textiles
+
+
+Expertise
+
+   3  (Knowledgeable)
+
+Recommendation
+
+    . . . Between possibly reject and neutral; 2.5
+
+Award Nomination
+
+   If accepted, this paper would not be among the top 20% of papers presented at CHI
+
+Review
+
+   This paper presents Sketch&Stitch, and interactive embroidery tool for
+   E-Textiles. Here, the authors describe an easier way for makers to
+   produce e-textiles with help of few steps such as drawing the
+   circuit/design on the textile, taking a snapshot of the design for
+   processing the embroidery details, using an embroidery machine to
+   stitching the design with conductive and non conductive layers and
+   attaching the electronic components.
+
+   Overall, the idea behind this work is very interesting and suitable for
+   the CHI community and could greatly benefit the maker community. The
+   authors display the use of a creative blend of existing technologies such
+   as image processing to digital embroidery machines to implement their
+   methodology. In addition, the related works adequately covers the context
+   of the work.
+
+   However, at this moment I am unable to decide if the paper is at an
+   acceptable level for CHI. There are few issues/points I came came across
+   while reading through which I hope the authors can address in their
+   rebuttal.
+
+   1) Initially, I was really confused by the term "Circuit Stickers". There
+   is a project under the same name, with a similar intention (adhesive
+   circuits), that recently gained popularity in the maker/wearable-tech
+   communities. Although this is not a deal breaker, I hope the authors can
+   use a different name for their "circuit stickers" to avoid any confusion.
+   https://www.crowdsupply.com/chibitronics/circuit-stickers
+   http://technolojie.com/circuit-stickers/
+
+   2) Mostly, I felt that the paper was NOT well organized. I felt that the
+   authors have used an extremely descriptive way to present their
+   methodologies when they could have used more images with lesser wording
+   to convey the ideas better.
+   - For example, the "Adding Interactivity" sub section does not add much
+   contribution to the paper as it simply describes some possible solutions.
+   Perhaps, these could have been described (or better yet, demonstrated)
+   later in the Application Examples section.
+
+   - Figure 1 and Figure 7 are essentially the same. The authors could have
+   used just one of the Figures to discuss the Sketch&Stitch walk through.
+
+   3) Embroidery stickers: Another main issue I found was that, there were
+   no images of embroidery stickers or the real usage of them shown. This is
+   an important part of this work, however, even in Figure 5(a) the
+   embroidery sticker seems like a digital overlay. As this is an important
+   part of the methodology, I am curious as to why there are no images or
+   examples of its usage shown here. For example, image 5(a) shows a
+   cross-type sticker. How would a user use it for  a different type of
+   crossing of two conductive traces?
+
+   4) Software: There is almost no description about the software interface
+   or much about how the user can interact with it. The authors describe the
+   software implementation, and show the transformation stages of the
+   sketch. Is there a way for the user to interact with these? For them to
+   confirm the design, can they zoom in, etc? How is the user prompted to go
+   through the stages and make changes? In addition, Figure 8b is not very
+   clear. What are those straight lines? ("the connecting lines signify the
+   path between individual stitches"- does this mean this a path of the
+   thread?)
+
+   5) Technical Evaluation: I appreciate the technical evaluation that
+   considers many different factors. However, I suggest the authors present
+   the results in the form of a graph: for example, Trace Length vs
+   Resistance for different stitch variants, etc. This way it would be
+   easier for a reader to come to a conclusion about the possible
+   resistances for different lengths
+
+   6) Usability Evaluation: The usability evaluation of this work is
+   presented through the designs implemented by an invited hobbyist. While I
+   enjoy the designs presented by the her, I find it difficult to draw any
+   proper conclusions from this study. The study does show very interesting
+   and cool ideas that can are done with e-textiles. However, it does not
+   highlight the advantages or the disadvantages of the proposed
+   methodology. How easy was this process compared to her previous
+   experience? How long did these impressive designs take for
+   implementation? Is there any particular advantage or some creative
+   trigger she found when using this methodology? Or how easy is it for a
+   non-expert of e-textile/embroidery to adapt to this methodology?
+   - In addition, discuss the target users for this methodology? While they
+   could be hobbyists, should they be experienced with circuits? What kind
+   of background is expected?
+   - I feel the current evaluation with a single user is weak to draw out
+   any proper conclusions. I hope the authors get to work with more users (a
+   range of hobbyists) to get a sense of how much training is required for
+   potential users, the weaknesses of the work, etc. In addition, I suggest
+   the authors to conduct a proper qualitative evaluation or a structured
+   interview. The current method, analysis or the objective for the work
+   with the single user is not very clear.
+
+   In general, I am really impressed by the idea of this work. However, I
+   feel that the authors have missed the mark on how they have presented
+   their work. Current paper has few flaws as I have pointed out earlier. I
+   hope the authors can clarify the above in their rebuttal to address these
+   points.
+
+Rebuttal response
+
+   (blank)
+
+
+------------------------ Submission 1538, Review 3 ------------------------
+
+Title: Sketch&Stitch: Interactive Embroidery for E-textiles
+
+Reviewer:           2AC
+
+Expertise
+
+   3  (Knowledgeable)
+
+Recommendation
+
+   Possibly Accept: I would argue for accepting this paper; 4.0
+
+Award Nomination
+
+   (blank)
+
+Review
+
+   The paper introduces a system that supports a new workflow for creating
+   e-textiles with embroidery machines. This workflow consists of three main
+   steps:
+
+   (1) The maker uses colored sketches and stickers to describe the artwork
+   and the electronic parts directly on the fabric.
+   (2) The system optically recognizes the sketched patterns and stickers,
+   converts them to embroidery patterns, and sends them to the machine for
+   stitching.
+   (3) The maker then replaces the stickers with real electronic components
+   and connects them to power to finalize her creation.
+
+   The paper is clear and well-written. It explains the different system
+   components in detail. It explores solutions to a range of fabrication
+   problems, e.g., how to produce reliable stitching patterns, how to
+   insulate the circuit traces, how to cross conductive traces, and how to
+   create sensors. It further tests the resistivity, insulation, and safe
+   spacing between connective threads. Finally, it reports on the
+   exploratory use of the system by an artist over three days. Although such
+   an evaluation is preliminary and rather informal, I believe that it is
+   valuable for this type of systems, as it allows the researchers to
+   identify limitations and reflect on future extensions and improvements.
+
+   Overall, I am positive about this paper, and I like to see it presented
+   at CHI. Although the contribution of each part of this work is not
+   impressive on its own (e.g., the use of stickers derives from other
+   recent work [45]), their combination results in an interesting and unique
+   approach that deserves publication.
+
+   A downside of the work is the lack of early feedback from the system's
+   potential users. The paper presents a new workflow without first
+   discussing  current practices in designing e-textiles or traditional
+   fabrics. Some earlier involvement of artists in the system's design could
+   possibly help better understand (or at least more effectively describe)
+   their current workflows.
+
+   I would also expect a kind of testing of some parts of the system, as it
+   is currently unclear to what extent they work. For example, it not clear
+   how easy it is produce sensors and how reliable such sensors are.  It is
+   also unclear how easy it is to transition from the image of the sketch to
+   the digital model that is sent to the machine. Is it everything automatic
+   or does it need some manual intervention? Although I understand that the
+   vision component is not the paper's primary focus, it is important to get
+   some feeling about the overall feasibility of the approach.
+
+   In addition, the paper (and video) provides no discussion (or evidence)
+   about the state of the textiles produced by the artist. Do they actually
+   work? If they don't fully work, which are the difficulties that emerged
+   during the process (e.g., no support for testing the printed circuits?)
+   and breakdowns (e.g., situations where stitching  did not work as
+   expected). If they do, I would expect some interesting examples of how
+   the system realized the various stitching patterns and techniques
+   discussed in the paper. I will ask the authors to address this point in
+   their rebuttal.
+
+   Finally, I was bit disappointed about the lack of interactivity in the
+   system so I am glad that the authors consider this direction as future
+   work. Allowing users to test and correct designed circuits, explore
+   alternative designs, and go back to the history are all promising
+   extensions.
+
+Rebuttal response
+
+   (blank)

@@ -54,7 +54,7 @@ Most of these require special tools and processes such as a vacuum chamber, regu
 Moreover, coating inks, polymers and solutions alter fabric flexibility \cite{farboodmanesh2005effect}. 
 Printed conductive lines are prone to cracking when bent, impeding conductivity. 
 %This problem also exists in printed electrical circuits as conductive materials such as inks or pastes with metallic particles 
-Research into making printed conductive traces more tolerant to bending, washing, and dry cleaning is ongoing \cite{yang2013waterproof,stempien2017shape}.
+Research into making printed conductive traces more tolerant to bending, washing, and dry cleaning is ongoing \cite{stempien2017shape}.
 %silk screening, where an adhesive conductive ink is applied to the open areas of a mesh reinforced stencil allowing the ink to pass through the mesh onto the substrate fabric
 
 %sputtering, is used to form high resolution (micrometer scale) circuits on fabric. The fabric, kept at 150 ◦ C, needs to be placed in a vacuum chamber with an inert gas like argon and needs a shadow mask to form the circuit patterns
@@ -63,7 +63,7 @@ Research into making printed conductive traces more tolerant to bending, washing
 
 
 %Conductive thread maintains the flexibility of the base fabric and endures movement, bending and flexing \cite{castano2014smart}.
-Weaving \cite{bonderover2004woven,dhawan2004woven1, dhawan2004woven2} and knitting \cite{farringdon1999wearable} integrate conductive yarn during fabric production.
+Weaving \cite{bonderover2004woven, dhawan2004woven2,dhawan2004woven1} and knitting \cite{farringdon1999wearable} integrate conductive yarn during fabric production.
 Weaving is the most common technique for e-textile manufacturing \cite{nakad2007using}. It is cost effective, quick, and can be used for large areas
 % (embroidery for relatively smaller areas).
 A Jaqcuard weaving machine can read a circuit design and create complicated woven patterns on fabric with high precision in an automated manner \cite{poupyrev2016project}. Weaving applies only low forces to the yarn, and a much wider range of yarns can be used successfully in a Jacquard loom than in an embroidery machine.
@@ -75,14 +75,14 @@ However, Jacquard looms are much less accessible for end users than embroidery m
 
 
 Embroidery is a textile  embellishment technique in which strands of thread are stitched onto a fabric surface. Embroidery can be manual or numeric. An advantage of embroidery machines is that they can create nearly arbitrary patterns on woven, non-woven, and knitteds fabrics, including tailored textiles and garments. Embroidery machines require less machine preparation than weaving looms.
-One can envision using an embroidery machine to create the fabric equivalent of a PCB. 
+One can potentially use an embroidery machine to create a PCB on fabric. 
 Post and Orth \cite{5387040} pioneered stitching and embroidering conductive thread to create resistors, capacitors, data and power busses, and capacitive keypads. 
 %keypads on a garment using silk organza fibers with a thin metal strand as the conductive fiber
-Other researchers demonstrated the embroidery of touch sensors \cite{zeagler2012textile, roh2014textile,hamdan2016grabbing}, stretch sensors \cite{vogl2017stretcheband}, and antennas \cite{brechet2017cost}. Gowrishankar et al. \cite{Gowrishankar:2013:PRE:2493988.2494341} created a repository of embroidery pattern motifs
-with different resistance values that can be easily incorporated into embroidery projects and used instead of normal resistors. Swiss company Forster Rohner\footnote{www.frti.ch/en/technologie-2/#tab-1496914209772-3-3}
+Other researchers demonstrated the embroidery of touch sensors \cite{hamdan2016grabbing,roh2014textile,zeagler2012textile}, stretch sensors \cite{vogl2017stretcheband}, and antennas \cite{brechet2017cost}. Gowrishankar et al. \cite{Gowrishankar:2013:PRE:2493988.2494341} created a repository of embroidery pattern motifs
+with different resistance values that can be easily incorporated into embroidery projects and in place of hardware resistors. Swiss company Forster Rohner\footnote{www.frti.ch/en/technologie-2/#tab-1496914209772-3-3}
 developed a commercial manufacturing method for embroidering circuit traces and attaching LEDs to fabric. 
 %Further, stitched traces can be easily electrically isolated from traces on the opposite side of the fabric [E-Textiles in the Apparel Factory: Leveraging Cut-And-Sew Technology Toward the Next Generation of Smart Garments], enabling multi-layer circuits [Multi-Layer E-Textile Circuits].
-We use an embroidery machine to enable end users to create fabric circuits and embed embroidery patterns of touch sensors and circuit traces shielding.
+We use an embroidery machine to enable end users to create fabric circuits and embed embroidery patterns of touch sensors and circuit trace shielding.
 
 %Midas: Fabricating Custom Capacitive Touch Sensors to Prototype Interactive Objects (users define electrical connections)
 %Disadvantages include operation being limited to a relatively small area, expensive operation relative to other textile processes, and limitations on the type and size of fiber that can be effectively used in embroidery machines.
@@ -91,13 +91,14 @@ We use an embroidery machine to enable end users to create fabric circuits and e
 
 
 
-Buechley et al.\ \cite{Buechley2009} have led the efforts of developing e-textile fabrication techniques that are accessible to a broader audience. Their goal is to diversify technology by including artists, designers, crafters and makers, and to use e-textiles as a platform for motivating STEM education. The authors use a laser cutter on conductive fabric with iron-on backing to create fabric PCBs. However, the resulting circuits are not durable enough for washing and extended use. They also describe three techniques to insulate conductive threads and fabrics: couching---stitching one thread over another---, ironing-on a non-conductive insulator, and puffy fabric paint. Perner-Wilson and Satomi \cite{perner2011handcrafting} explore different crafting techniques such as knitting to make sensors from soft conductive threads and fabrics. Peng et al.\  \cite{peng2015layered} use an adapted laser cutter to create 3D textiles with embedded conductive fabric.
+Buechley et al.\ \cite{Buechley2009} have led the efforts of developing e-textile fabrication techniques that are accessible to a broader audience. Their goal is to diversify technology by including artists, designers, crafters and makers, and to use e-textiles as a platform for motivating STEM education. The authors use a laser cutter on conductive fabric with iron-on backing to create fabric PCBs. However, the resulting circuits are not durable enough for washing and extended use. They also describe techniques to insulate conductive threads and fabrics. %: couching---stitching one thread over another---, ironing-on a non-conductive insulator, and puffy fabric paint. 
+Perner-Wilson and Satomi \cite{perner2011handcrafting} explore different crafting techniques such as knitting to make sensors from soft conductive threads and fabrics. Peng et al.\  \cite{peng2015layered} use an adapted laser cutter to create 3D textiles with embedded conductive fabric.
 
 
 
 
 
-Once a fabric circuits has been created, the second key challenge is attaching electronic components and PCBs to it.
+Once a fabric circuit has been created, the second key challenge is attaching electronic components and PCBs to it.
 %Devices that may be attached to the conductive elements of a textile fabric include rigid and flexible circuit boards, multi-chip modules and individual integrated circuit packages. 
 %It is desirable that individual chip packages be directly connected or bonded to conductive elements of a fabric, so as to form a more flexible and conformable electronic textile. 
 %The accessibility, durability of these techniques and integrating electronic modules, interconnections or connectors in a manner that preserves the fabric's textile character. reliability of electronics, textile conductors and connections in textile while washing, draping, stretching, wearing, etc.

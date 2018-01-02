@@ -1,4 +1,39 @@
-\section{Implementation}
+\section{TODO: Implementation}
+
+
+\paragraph{Marker Detection}
+Initially, the algorithm imports the input image from a cloud storage and converts it from the RGB-colorspace to the HSV-colorspace. The HSV space allows defining color ranges, making it more suitable for processing images where color variability is expected. Next, the algorithm detects sticker markers. We use the AR Maker library\footnote{https://pypi.python.org/pypi/ar-markers/0.4.1} in OpenCV to generate and detect sticker markers. Based on the detected markers, our algorithm distinguishes two types of input images: (a) \textit{color assignment image}, which contains 6 markers on the color template, one for each fabric pen; (b) \textit{design image}, which contains two markers on the fabric hoop and, optionally, two other sets of markers: Shield Sticker markers, and Sensor Sticker markers. 
+
+\paragraph{Reprocessing and Cropping}
+Next, the algorithm adjusts the gamma, sharpness, contrast and exposure of the image. These operations were selected carefully to enhance color contrast, remove noise and artefacts, and improve the edges of the sketched shapes. 
+%We assume a uniform background 
+
+In case of a \textit{design image}, our algorithm calculates the distance between the hoop markers and creates a cropping mask accordingly to remove the hoop from the image.
+
+\paragraph{Color Detection and Filtering}
+Based on the type of input image, our algorithm performs different sets of operations to detect colors.
+
+\textit{Color assignment image} --- we first scan the lines next to each color marker reading the Hue, Saturation, and Value of each pixel. Spikes in the Hue channel values indicate color change. We calculate the mean Hue value around each spike and assign this color to the nearest color marker. Similarly we calculate the average values of the Saturation and Value channels. Based on these HSV values we generate color ranges and associate each with a color marker.These color ranges define the color palette of the \textit{design images}. S\&S PC app displays the processed \textit{color assignment image} on the PC screen and provides the user with sliders to optionally tune the upper and lower bounds of the HSV channels. 
+%If the algorithm fails to detect the user's color palette, the user can repeat the process using alternative fabric pen colors. 
+%+color assignment provides the user with the freedom on color choice
+%+it detects colors as they appear on the fabric background
+
+
+\textit{Design image} --- using the user's color palette (color ranges), the algorithm thresholds the input image and creates the following selection masks: 
+\begin{enumerate}
+    \item \textit{Sticker colors} masks --- Remove any stickers and markers from the \textit{design image}. % and leaves white space in their place.
+    \item \textit{Trace color} mask --- Filters for circuit traces, hand-sketched sensors, and the user's extended grid lines of any \textit{sensor stickers}. %All are stored in the trace layer.
+    \item \textit{Insulation color} mask --- Filters for insulated traces.
+    \item \textit{Art colors} masks --- Filter for the artwork lines and shapes in the image.
+\end{enumerate}
+The results of masking the \textit{trace color, insulation color, art colors} are stored in separate, single-colored files. S\&S PC app displays the processed \textit{design image} on the PC screen and provides the user with sliders to optionally tune the upper and lower bounds of the HSV channels. The use sees the results of adjusting the sliders on the screen in real-time. Once the user confirms color detection, the algorithm creates the \texit{embroidery stack}.
+
+\paragraph{Embroidery Stack Generation and Stitch Mapping}
+To create the \textit{embroidery stack} the algorithm starts by replacing objects in the \textit{design image} with single-colored design stacks. All objects in \textit{insulation color} are duplicated and stored in two files tinted with \textit{insulation color} and \textit{trace color}. These files are \textit{insulation stack}. All Embroidery Sticker markers are replaced with a predefined stack of three files. Each file contains a line segment tinted with \textit{trace color}, \textit{insulation color}, or a system defined \textit{bridge color}. Stack files of the same color are then combined in a single file. This results in up to seven color-tinted files: \textit{trace color}, \textit{insulation color}, \textit{art colors}, \textit{bridge color}. These files are called the \textit{embroidery stack}. S\&S PC app sends the \textit{embroidery stack} to the embroidery software to be converted to embroidery patterns. Our app then sends the converted patterns to the embroidery machine to be viewed and stitched by the user.
+
+
+
+
 
 Figure \ref{fig:Flowers} illustrates the transformations of a sketch to embroidery machine patterns in Sketch\&Stitch. 
 Sketch\&Stitch's pipeline begins when the user calibrates her fabric and marker colors using a printable template and the system's mobile app. The user defines a color palette: a \textit{trace color} an optional \textit{insulation color} and up to six \textit{art colors}. Based on these colors, the system generates a color scheme for processing user input. The scheme is composed of the above \textit{trace, insulation} and \textit{art colors}, and three additional \textit{sticker colors}, for printing and recognizing Component and Embroidery Stickers, are selected from outside the user's palette.
@@ -11,9 +46,6 @@ Sketch\&Stitch's pipeline begins when the user calibrates her fabric and marker 
   \end{figure}
 
 Every time the user is ready to embroider a sketch, she presses the capture button near the camera mount, and the mobile app snaps a picture of the hooped fabric and sketch. Below we describe the three following steps in Sketch\&Stitch pipeline. In our implementation we used OpenCV libraries for image processing and marker recognition. 
-
-%The sketch is first localized in the image with help of visual markers on the hoop's frame, processed to reduce noise and enhance color, split into design layers based on a color scheme, fiducial Circuit Stickers are detected and replaced with appropriate patterns, design layers are sent to embroidery software to be digitized, and finally, digital embroidery patterns are sent to embroidery machine to be stitched. 
-
 
 \subsection{Sketch Localization and Noise Reduction}
 Once the sketch is captured, the system looks for a visual marker on the physical hoop to calculate its center and orientation, and applies the appropriate cropping mask to extract the sketch and store it at real-world scale.
@@ -30,7 +62,7 @@ Next, the system performs color filtering based on the established color scheme,
 
 To create the embroidery stack the system filters the sketch based on color scheme as follows: 
 \begin{enumerate}
-    \item Filter out Component Stickers' \textit{sticker colors}, e.g., black and white. This step removes the stickers from the sketch and leaves white space in their place.
+    \item Filter out Component Stickers' \textit{sticker colors}, e.g., black and white. This step removes any stickers and markers from the sketch. % and leaves white space in their place.
     \item Filter for \textit{trace color}, e.g., red. This includes circuit traces, hand-sketched sensors, and the grid in \textit{sensor stickers}. All are stored in the trace layer.
     \item Filter for \textit{insulation color}, e.g., green. These objects are duplicated and stored in the trace layer and insulation layer.
     \item Filter for \textit{art colors}, storing each in a separate art layer.
