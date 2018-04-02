@@ -24,7 +24,7 @@
 %\begin{figure}
 \centering
 \includegraphics[width=1\textwidth]{figures/Fig1_Nur2}
-\caption{Sketch\&Stitch workflow: 1. A user sketches artwork directly on fabric, 2. she uses \textit{Circuitry Stickers} to plan the circuit layout, 3. she draws circuit traces to connect the stickers, 4. the system takes a picture of the sketch, converts it into embroidery patterns, and sends them to an embroidery machine for stitching using conductive and non-conductive threads, 5. the user replaces Circuitry Stickers with real electrical components and attaches them to the fabric.
+\caption{Sketch\&Stitch workflow: 1. The user sketches an artwork directly on the fabric, 2. she uses \textit{Circuitry Stickers} to plan the circuit layout, 3. she draws circuit traces to connect the stickers, 4. the system takes a picture of the sketch, converts it to embroidery patterns, and sends them to an embroidery machine for stitching using conductive and non-conductive threads, 5. the user replaces Circuitry Stickers with real electrical components and attaches them to the fabric.
 }
  \vspace{-1em}
 \label{fig:Fig1}
@@ -57,7 +57,7 @@ It combines the visual and haptic expressiveness of textiles with the interactiv
 %Berlin University of the Arts - Department of Textile and Surface Design
 This has motivated HCI research to investigate techniques that enable a wider audience to integrate fabrics and electronics into interactive textiles \cite{Buechley2009,perner2011handcrafting,5387040}.
 
-In e-textiles, conductive threads, inks, polymers, or textiles are attached directly to a base fabric, creating \textit{fabric circuits}. These circuits connect traditional electronic components, usually on printed circuit boards, but they can also directly include functional parts such as fabric-based resistors, capacitors, touch sensors, actuators \cite{stylios2007shape}, or antennas \cite{catrysse2004towards}.
+In e-textiles, conductive threads, inks, polymers, or textiles are attached directly to a base fabric, creating \textit{fabric circuits}. These circuits connect traditional electronic components, usually on printed circuit boards, but they can also directly include functional parts such as fabric-based resistors, capacitors, touch sensors, or antennas. %actuators \cite{stylios2007shape}
 %batteries \cite{}
 %powering elements \cite{}
 Creating e-textiles typically involves 1.\ designing or choosing an artwork, 2.\ planning the layout of electrical components and traces, 3.\ creating the artwork and fabric circuit on the base fabric, 4.\ insulating circuit traces where necessary, and 5.\ attaching electronic components \cite{Lovell:2010:ETD:1810543.1810578}. 
@@ -149,7 +149,7 @@ To start stitching, the user threads the machine's needle with the appropriate t
 % Google Jacquard offers colored conductive threads for weaving. There is research of dying threads.
 
 \textit{Circuitry Stickers} are symbolic images printed on adhesive paper. 
-They are adhered to fabric to represent elements to be added to the circuit during and after embroidery. Sketch\&Stitch offers two types: \textit{Component Stickers} and \textit{Embroidery Stickers}. Component Stickers serve as placeholders for electronic components such as LEDs, motors and speakers, usually on PCBs. Users replace these stickers with their hardware counterparts after embroidery is complete, using one of three attachment techniques we describe further below. Embroidery Stickers represent multi-layer custom embroidery patterns required for wire crossings and our textile touch sensors. Users remove these stickers from fabric after capturing their design, and our system inserts the required patterns in place automatically during the embroidery process.
+They are adhered to fabric to represent elements to be added to the circuit during and after embroidery. S\&S offers two types: \textit{Component Stickers} and \textit{Embroidery Stickers}. Component Stickers serve as placeholders for electronic components such as LEDs, motors and speakers, usually on PCBs. Users replace these stickers with their hardware counterparts after embroidery is complete, using one of three attachment techniques we describe further below. Embroidery Stickers represent multi-layer custom embroidery patterns required for wire crossings and our textile touch sensors. Users remove these stickers from fabric after capturing their design, and our system inserts the required patterns in place automatically during the embroidery process.
 
 Circuitry Stickers were developed for two reasons: First, the presser foot in embroidery machines only has a clearance of about 1 mm above the fabric, too low to travel above even thin populated PCBs. For comparison, LilyPad PCBs are 0.8 mm thick but in total more than 2 mm high due to the SMD components. 
 %This risks breaking the needle or machine if they come in contact.} 
@@ -167,7 +167,7 @@ The resulting end-to-end workflow is to 1.\ sketch an artwork directly on fabric
 \begin{figure}
 \centering
   \includegraphics[width=1\columnwidth]{figures/UI.png}
-  \caption{Sketch&Stitch comprise a smartphone, a wireless button, a PC, and an embroidery machine. It runs two custom softwares for capturing and digitizing sketches and a proprietary embroidery tool for converting images to stitches. Users capture a design with the button, verify it on the PC screen and stitch it in the embroidery machine.}~\label{fig:UI}
+  \caption{Sketch\&Stitch comprises a smartphone, a wireless button, a PC, and an embroidery machine. It runs two custom softwares for capturing and digitizing sketches and a proprietary embroidery tool for converting images to stitches. Users capture a design with the button, verify it on the PC screen and stitch it in the embroidery machine.}~\label{fig:UI}
   \vspace{-2.2em}
 \end{figure}
 
@@ -179,9 +179,9 @@ The resulting end-to-end workflow is to 1.\ sketch an artwork directly on fabric
 %Sketch\&Stitch allows users to draw their designs directly on fabric,
 Physical sketching enables users to express themselves freely without the constraints of design applications \cite{landay1995interactive,Peiris:2014:PTC:2686612.2686691,schweikardt2000digital}, and provides a continuous representation of the evolving work piece \cite{willis2011interactive}. Drawing on fabric is an established art form. It is also used to design patterns for manual embroidery and mark the placement of pockets, buttons, and other design elements. 
 
-At the beginning of the S\&S workflow, the user assigns her color palette---colors of the fabric pens that she will use in her sketch. Our system supports a palette of six colors: a \textit{trace color} for drawing electrical traces, an optional \textit{insulation color} for drawing insulated traces, and up to four \textit{art colors} for drawing the artwork. The system reserves the \textit{sticker colors} white and black for Circuitry Stickers. To assign the color palette, she uses our printable color template, which consists of six slits, each marked by a name: trace, insulation, or art, and an AR marker for optical detection. She places the template on the fabric and draws a stroke in each slit using water-soluble marking pens. The markings of these pens can be washed out easily when desired. She then captures the template by pressing a wireless button. The S\&S PC app provides feedback on the results of color assignment on the computer screen. After color assignment, the user secures the fabric flat and taut in an embroidery hoop of the desired size. The hoop has AR markers to localize the sketch. She now sketches her art and circuit.
+At the beginning of S\&S workflow, the user assigns her color palette---colors of the fabric pens that she will use in her sketch. Our system supports a palette of six colors: a \textit{trace color} for drawing electrical traces, an optional \textit{insulation color} for drawing insulated traces, and up to four \textit{art colors} for drawing the artwork. The system reserves the \textit{sticker colors} white and black for Circuitry Stickers. To assign the color palette, she uses our printable color template, which consists of six slits, each marked by a name: trace, insulation, or art, and an AR marker for optical detection. She places the template on the fabric and draws a stroke in each slit using water-soluble marking pens. The markings of these pens can be washed out easily when desired. She then captures the template by pressing a wireless button. The S\&S PC app provides feedback on the results of color assignment on the computer screen. After color assignment, the user secures the fabric flat and taut in an embroidery hoop of the desired size. The hoop has AR markers to localize the sketch. She now sketches her art and circuit.
 
-Sketch\&Stitch uses colors instead of symbolic sketch annotations for user--system communication to avoid imposing design constraints on freehand sketches, and to keep the design uncluttered. Pen colors are used to encode stitch types and enforce the sequence of pattern stitching. For example, in a simple design, the system sequences all objects in \textit{trace color}, followed by objects in each \textit{art color}. This reduces the number of thread changes that the user has to do and enables her to debug her circuit before stitching the artwork. %(We describe stitch types in section Technical Stitching.) 
+S\&S uses colors instead of symbolic sketch annotations for user--system communication to avoid imposing design constraints on freehand sketches, and to keep the design uncluttered. Pen colors are used to encode stitch types and enforce the sequence of pattern stitching. For example, in a simple design, the system sequences all objects in \textit{trace color}, followed by objects in each \textit{art color}. This reduces the number of thread changes that the user has to do and enables her to debug her circuit before stitching the artwork. %(We describe stitch types in section Technical Stitching.) 
 The number and color of threads for stitching the artwork can be chosen during the embroidery process, independently of the color palette. The user may pause the embroidery machine, re-thread the needle with a new thread, and resume stitching. % every time she wants to switch thread. % color. The machine resumes from the last stitch.}
 %\textcolor{red}{(these are usually not the final \textit{thread colors}, see below).} 
  %The user repeats this process only if she wants to change the color palette.  
@@ -206,7 +206,7 @@ Component Stickers can be created for any PCB or off-the-shelf components. The o
 \begin{figure}[t]
 \centering
   \includegraphics[width=0.85\columnwidth]{figures/ComponentStickers.png}
-  \caption{1. Component Stickers represent electrical components in a hand-sketch circuit. Pin grooves designed to enlarge component contact area. 2. Stickers replaced with hardware cpunterparts after embroidery.}~\label{fig:ComponentStickers}
+  \caption{1. Component Stickers represent electrical components in a hand-sketch circuit. Pin grooves designed to enlarge component contact area. 2. Stickers replaced with hardware counterparts after embroidery.}~\label{fig:ComponentStickers}
   \vspace{-2.2em}
 \end{figure}
 
@@ -254,7 +254,7 @@ The results of a sewing machine and manual sewing can be as reliable as using th
 Insulating circuit traces, especially in wearable e-textiles, is paramount for their functionality. %Textiles are flexible materials. 
 Exposed traces may come in contact with each other as fabric folds or bends, creating shorts or undesired signals. Buechley et al.\ \cite{Buechley2009} proposed couching---stitching one thread over another---as a natural insulation technique for fabric circuit traces. However, they noted that sewing machines may leave gaps in the couching stitch, making it an unreliable cover for the underlying conductive thread. Computer-controlled embroidery machines are much better at maintaining a consistent couching stitch, making them a perfect fit for this technique. 
 
-The user insulates a trace in Sketch\&Stitch by drawing it using the \textit{insulation color} pen. The system detects objects in this color and creates an \textit{insulation stack}---a grid layer and an insulation layer. Each layer contains a copy of the objects and is converted to an embroidery pattern. The machine stitches the patterns in sequence using the corresponding stitch type. 
+The user insulates a trace in S\&S by drawing it using the \textit{insulation color} pen. The system detects objects in this color and creates an \textit{insulation stack}---a grid layer and an insulation layer. Each layer contains a copy of the objects and is converted to an embroidery pattern. The machine stitches the patterns in sequence using the corresponding stitch type. 
 
 
 %the grid pattern is stitched first using a \textit{grid stitch} with conductive thread, and the insulation pattern is stitched next using an \textit{insulation stitch} with non-conductive thread.
@@ -297,7 +297,7 @@ When the system detects the sticker, it creates a \textit{shield stack} in place
 %   \caption{}~\label{fig:RedStickers}
 %   \vspace{-2.5em}
 % \end{figure}
-Besides hardware electronics, users can use \textit{Sensor Stickers}, Embroidery Stickers to add touch sensors made from conductive thread directly onto the fabric. Sketch\&Stitch supports three sensor types: a pushbutton, a slider, and a touchpad.
+Besides hardware electronics, users can use \textit{Sensor Stickers}, Embroidery Stickers to add touch sensors made from conductive thread directly onto the fabric. S\&S supports three sensor types: a pushbutton, a slider, and a touchpad.
 %actuators, e.g., by couching a shape memory alloy wire, and various touch sensors, as we will demonstrate in this section.
 
 Figure \ref{fig:PushButtons_Sliders} shows hand-sketched pushbuttons and sliders. A capacitive pushbutton is created by connecting any segment of conductive thread to a capacitive sensing circuit. The circuit can sense when the user's finger or body is in contact with the thread (touch) or not (no touch). A resistive pushbutton can be created with two conductive traces 3--4 mm apart that the user bridges when touching. %, with one trace usually grounded, the other connected to power or a controller pin. 
@@ -337,7 +337,7 @@ To evaluate our touchpad sensor, we overlaid two pieces of fabric over two 4$\ti
 \begin{figure}[h]
 \centering
   \includegraphics[width=1.0\columnwidth]{figures/Touchpad.png}
-  \caption{Sensor Sticker process: 1. A user cuts the sticker, 2. adheres it to fabric, and draws connecting traces with \textit{trace color} pen, 3. captures the design and removes the sticker, 4. the system stitches the sensor.}~\label{fig:Touchpad}
+  \caption{Sensor Sticker process: 1. The user cuts the sticker, 2. adheres it to fabric, and draws connecting traces with \textit{trace color} pen, 3. captures the design and removes the sticker, 4. the system stitches the sensor.}~\label{fig:Touchpad}
   \vspace{-1.8em}
   \end{figure}
 
@@ -381,10 +381,10 @@ The fourth hides hardware components by attaching them to their contact area fro
 \begin{figure} [t!]
 \centering
   \includegraphics[width=0.9\columnwidth]{figures/Debugging.png}
-  \caption{Sketch digitization pitfalls: a. Merged lines. b. Segmented lines.}~\label{fig:Debugging}
+  \caption{Sketch digitization pitfalls: a. Merged lines. b. Segmented lines. These are caused by, e.g., variable pen pressure and color noise.}~\label{fig:Debugging}
   \vspace{-2.2em}
 \end{figure}
-Users can debug their designs at three stages in the workflow. The system provides users with feedback to detect pitfalls, such as indistinguishable colors, segmented lines, and merged lines, from sketch digitization. After assigning the color palette, our S\&S PC app displays the detected colors on the PC screen. Based on this early feedback, the user decides to redo color assignment using, e.g., different pen colors, or to start sketching. Similarly, after each capture of the sketch, the app displays the digitized design on the PC screen. A mismatch between the design (input) and the preview (output) could be caused by poor lighting, shadows, indistinct strokes, color variability, or other artifacts commonly present in photographed images. Indistinct strokes and color variability occur due to pen jitters over textured fabrics and variable pressures applied while drawing a single stroke, causing the stroke color to vary between darker and lighter shades. Consequently, a trace may appear segmented during color detection, resulting in an open circuit in the final product. To handle these issues, the S\&S PC app offers an optional slider-based interface for manually tuning color detection. Otherwise, the user should perform the proper adjustments directly on the fabric, e.g., remove sources of shadow, or emphasize the strokes, and recapture her design. 
+Users can debug their designs at three stages in the workflow. The system provides users with feedback to detect pitfalls, such as indistinguishable colors, segmented lines, and merged lines, from sketch digitization (see Fig.\ \ref{fig:Debugging}). After assigning the color palette, our S\&S PC app displays the detected colors on the PC screen. Based on this early feedback, the user decides to redo color assignment using, e.g., different pen colors, or to start sketching. Similarly, after each capture of the sketch, the app displays the digitized design on the PC screen. A mismatch between the design (input) and the preview (output) could be caused by poor lighting, shadows, indistinct strokes, color variability, or other artifacts commonly present in photographed images. Indistinct strokes and color variability occur due to pen jitters over textured fabrics and variable pressures applied while drawing a single stroke, causing the stroke color to vary between darker and lighter shades. Consequently, a trace may appear segmented during color detection, resulting in an open circuit in the final product. To handle these issues, the S\&S PC app offers an optional slider-based interface for manually tuning color detection. Otherwise, the user should perform the proper adjustments directly on the fabric, e.g., remove sources of shadow, or emphasize the strokes, and recapture her design. 
 
 Once the sketch in converted to stitches, the user sees what the end result will look like via the embroidery machine's touch display (WYSIWYG editor). The display offers tools to zoom in, duplicate, mirror, translate, etc.\ the design as a whole, but it does not allow the user to change the design on the stitch level. Using this preview, the user can detect the issue of merged traces, which occurs when the spacing between two independent lines is less than 0.2 mm (see Technical Stitching). The user fixes this by erasing the problematic traces on fabric and re-sketching them further apart. Finally, the \textit{incremental design} feature allows her to test the physical design, artwork and circuit, by selectively sketching and stitching parts of it. She may also use another piece of fabric to stitch the first iteration before committing on the final fabric.
 
@@ -403,7 +403,7 @@ Once the sketch in converted to stitches, the user sees what the end result will
   \vspace{-2.2em}
 \end{figure}
 
-We illustrate Sketch\&Stitch's basic workflow using the example of an interactive flower that emits light patterns when the user touches one of its leaves (Fig.\ \ref{fig:Walkthrough}). %The flower includes 3 LEDs, 1 battery holder, and 1 microcontroller 
+We illustrate S\&S's basic workflow using the example of an interactive flower that emits light patterns when the user touches one of its leaves (Fig.\ \ref{fig:Walkthrough}). %The flower includes 3 LEDs, 1 battery holder, and 1 microcontroller 
 %ATmega32U4 Board from the LilyPad kit. 
 
 
@@ -432,7 +432,7 @@ embroidery machine and its software, DesignerPlus v.8, with Shieldex 117/17 dtex
 Embroidery is one of the most stressful textile processes for conductive thread \cite{5387040}. This leads to thread breaks and segmented circuit traces. A stitching speed of 700 stitch/min reduces the heat and friction associated with high speeds. %and used metallic thread needles.
 %a light weight bobbin thread (60 wt).
 
-Table \ref{tab:Stitches} summarizes the stitches that Sketch\&Stitch uses to embroider users' designs. The Satin stitch is used to stitch the artwork. The length of a stitch determines the margin of error in the length of sketched and insulated traces when stitched. 
+Table \ref{tab:Stitches} summarizes the stitches that S\&S uses to embroider users' designs. The Satin stitch is used to stitch the artwork. The length of a stitch determines the margin of error in the length of sketched and insulated traces when stitched. 
 %trace increases by 0--0.8 mm or by 0--0.3 mm for insulated traces when stitched. 
 The width of a sketched line increases by 0--0.2 mm when stitched due to the smoothing algorithm that the embroidery software uses before transforming a digital sketch to embroidery patterns. Thus, gaps that are 0.2 mm wide between adjacent stokes may be closed with stitches. We describe three tests for determining the system's stitches. We compared variants of the basic stitch types, Satin, and Triple and Single Running. We excluded special purpose and decorative stitches. %The Satin stitch has a variable width, suitable for outlining lines and filling shapes. Running stitches have a fixed width and are only used for outlines. 
 The tests were conducted on cotton and linen fabrics. Measurements were taken directly after embroidery, and after one and two weeks of frequent fabric handling. We report the average measurements.
@@ -526,7 +526,7 @@ Our goal was to find an \textit{insulation stitch} that prevents undesired conne
  \begin{figure}[h!]
 \centering
   \includegraphics[width=1.0\columnwidth]{figures/Pipeline}
-  \caption{Sketch digitization pipeline. Input image with the palette: red trace, green insulation, blue art, and a Shield and Component Stickers. Output embroidery stack excludes stickers, separates shapes in single-color layer, and generates two system layers: grid and bridge.}~\label{fig:Pipeline}
+  \caption{Sketch digitization pipeline. Input design image with color palette: red trace, green insulation, blue art, and a Shield and Component Stickers. Output embroidery stack excludes stickers, separates shapes in single-colored layers, and generates two system layers: grid and bridge. Stack is sent to embroidery software for stitch conversion.}~\label{fig:Pipeline}
   \vspace{-1.2em}
   \end{figure}
 
@@ -544,7 +544,7 @@ Our goal was to find an \textit{insulation stitch} that prevents undesired conne
 
 
 \section{Example Applications Created By an Artist} % and Emerging Design processes
-To reveal early opportunities and challenges in Sketch\&Stitch workflow, we invited an artist with a technical background (female, 24 years old) to create e-textiles using our system over the course of three days. On the first day, the artist received a twenty-minute introduction of the system. For the next four hours, she practiced sketching and stitching simple shapes and basic circuits. In the following two days, she spent a total of 10 hours of unrestricted creative work. We observed and documented her process and artifacts, conducted 2 unstructured interviews (day 1 and 2) and a retrospective study with her and a researcher reviewing photos of her progress (day 3).
+To reveal early opportunities and challenges in S\&S workflow, we invited an artist with a technical background (female, 24 years old) to create e-textiles using our system over the course of three days. On the first day, the artist received a twenty-minute introduction of the system. For the next four hours, she practiced sketching and stitching simple shapes and basic circuits. In the following two days, she spent a total of 10 hours of unrestricted creative work. We observed and documented her process and artifacts, conducted 2 unstructured interviews (day 1 and 2) and a retrospective study with her and a researcher reviewing photos of her progress (day 3).
 
 Below, we describe three unique e-textiles that were developed by the artist. She used the LilyPad hardware kit, which she programmed with the Arduino IDE. We follow this with a brief summary of her feedback and emerging processes. 
 
@@ -594,7 +594,7 @@ The pillow was stitched using our 5th integration strategy---the artwork and cir
 The artist was very positive about her experience with our system. She was particularly inspired by the range of circuit integration strategies. We summarize her feedback on the design workflow, sketching on fabric, and design processes. 
 
 
-\textit{Design Workflow:} The artist found the workflow particularly efficient for creating e-textiles of substantial artwork and simple circuits. She noted that hand-sketching complex circuits can be challenging and error-prone. For example, drawing and correcting the traces in the Wearable Mandala consumed 40\% of the project time. For an 8$\times$8 touchpad sensor, she employed our 5th integration strategy to gain more space to route the sensor traces to a Component Sticker, without affecting her design. She found that using colored pens and stickers for art and circuitry communicate a lower entry threshold. %One limitation is detecting colors on dark colored fabrics. 
+\textit{Design workflow}. The artist found the workflow particularly efficient for creating e-textiles of substantial artwork and simple circuits. She noted that hand-sketching complex circuits can be challenging and error-prone. For example, drawing and correcting the traces in the Wearable Mandala consumed 40\% of the project time. For an 8$\times$8 touchpad sensor, she employed our 5th integration strategy to gain more space to route the sensor traces to a Component Sticker, without affecting her design. She found that using colored pens and stickers for art and circuitry communicate a lower entry threshold. %One limitation is detecting colors on dark colored fabrics. 
 After a few trials, she learned how to use the system's feedback to detect and fix digitization pitfalls. Afterwords, she reported that the outcomes of the system better matched her expectations.
 
 
@@ -603,7 +603,7 @@ After a few trials, she learned how to use the system's feedback to detect and f
 
 
 
-\textit{Sketching on Fabric:} She reported that a main benefit of sketching on fabric is evaluating designs quickly and in context. While sketching the Wearable Mandala, she wore the t-shirt several times to assess how the design looked, or if it constrained her when moving. Sometimes she made changes to her original layout, e.g., strategically repositioning Component Stickers to convey an idea. Another benefit was understanding the material, e.g., leather inspired straight lines and right angles, while cotton afforded curved and flowing lines. She also noted that textured fabrics, such as denim, caused drawing irregularities, while towel fabric and fur did not afford sketching on them. 
+\textit{Sketching on fabric}. She reported that a main benefit of sketching on fabric is evaluating designs quickly and in context. While sketching the Wearable Mandala, she wore the t-shirt several times to assess how the design looked, or if it constrained her when moving. Sometimes she made changes to her original layout, e.g., strategically repositioning Component Stickers to convey an idea. Another benefit was understanding the material, e.g., leather inspired straight lines and right angles, while cotton afforded curved and flowing lines. She also noted that textured fabrics, such as denim, caused drawing irregularities, while towel fabric and fur did not afford sketching on them. 
 
 
 %However, the artist found that our design workflow was not suitable for all fabrics. For example, she reported that drawing continuous lines on stretchable fabrics, which have more than 2\% Elastane, was very challenging. Textured fabrics, such as upholstery fabric, required her to sketch over a single line several times to seal all the gaps in the rough surface. 
@@ -668,7 +668,7 @@ Finally, we want to perform studies to inspect user requirements and extend our 
 
 
 \section{Conclusion}
-This paper introduced Sketch\&Stitch, an interactive system for creating e-textiles. It enables a new design workflow that combines physical sketching with an embroidery machine, offering users the benefits of direct making and the power of digital tools. %The system is targeted at artists, designers, and makers especially during the early stages of e-textile design. 
+This paper introduced Sketch\&Stitch, an interactive system for creating e-textiles quickly and iteratively. It enables a new design workflow that combines physical sketching with an embroidery machine, offering users the benefits of direct making and the power of digital tools. %The system is targeted at artists, designers, and makers especially during the early stages of e-textile design. 
 It implements a digitization algorithm for converting a sketch to an embroidery. We described novel stitch patterns for attaching electronics, shielding wire crossings, and integrating sensors (pushbuttons, sliders, touchpads) directly on fabric. An empirical evaluation of the technical stitches was presented. Finally, we demonstrated the potential and advantages of our workflow.
 
 
@@ -677,6 +677,10 @@ It implements a digitization algorithm for converting a sketch to an embroidery.
 
 
 %more agency and control over the final outcome \cite{}
+
+\section{Acknowledgments}
+We thank Paulina Reijsmeijer and Henric St{\"o}nner for helping with the figures. This work was funded by the German 3D-Kompetenzzentrum and B-IT Foundation.
+
 % BALANCE COLUMNS
 \balance{}
 

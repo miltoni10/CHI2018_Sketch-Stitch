@@ -19,7 +19,7 @@ Our algorithm adjusts the gamma, and increases the sharpness, contrast, and expo
 %+it detects colors as they appear on the fabric background
 
 
-\textit{Design image}. The algorithm thresholds the image using the user's color palette, removes Component Stickers by filtering for \textit{sticker colors}, and creates the following single-color layers:
+\textit{Design image}. The algorithm thresholds the image using the user's color palette, removes Component Stickers by filtering for \textit{sticker colors}, and creates the following single-colored layers:
 \begin{enumerate}
 \itemsep-0.2em 
    % \item \textit{Sticker colors} masks --- Filters for Component Stickers to remove them from the image. % and leaves white space in their place.
@@ -33,7 +33,7 @@ After color detection is complete, S\&S PC app displays the digitized input imag
 To enable incremental design, the algorithm subtracts the input \textit{design image} from the last user-confirmed image before performing color detection.
 
 \subsection{Embroidery Stack Generation and Stitch Mapping}
-In the \textit{design image,}, the algorithm creates the necessary stacks for insulated objects and Embroidery Stickers, as previously described. The combination of layers from the selection masks and the stacks is called the \textit{embroidery stack} (see the last step in Fig.\ \ref{fig:Pipeline}). S\&S PC app sequences the layers and sends them to the embroidery software in the following order: trace (red), grid (purple), insulation (green), bridge (orange), then art layers (blue), together with the  color--to-- stitch mapping. The embroidery machine stitches the layers in sequence. The user uses the color of each layer, which appear on the machine's display, to resolve the type of thread required.
+In the \textit{design image,}, the algorithm creates the necessary stacks for insulated objects and Embroidery Stickers, as previously described. The combination of layers from the selection masks and the stacks is called the \textit{embroidery stack} (see the last step in Fig.\ \ref{fig:Pipeline}). S\&S PC app sequences the layers and sends them to the embroidery software in the following order: trace (red), grid (purple), insulation (green), bridge (orange), then art layers (blue), together with the  color--to--stitch mapping in Table \ref{tab:Stitches}. The embroidery machine stitches the layers in sequence. The user uses the color of each layer, which appear on the machine's display, to resolve the type of thread required.
 
  %duplicates the insulation layer and tints it with the system's \textit{grid color}, generating an \textit{insulation stack}. It replaces each sensor marker with a \textit{shield stack} composed of a grid, insulation, and bridge layers, each tinted accordingly. Finally, the algorithm merges and sequences the layers from the selection masks and the stacks based on color. The result is an \textit{embroidery stack} composed of a trace, grid, insulation, bridge, and art layers. The layers are sent to the embroidery software to be converted to embroidery patterns with the corresponding stitch types. S\&S PC app sends the patterns to the embroidery machine. The user stitches the patterns in sequence and uses the color of each pattern to resolve the type of thread it requires.
 

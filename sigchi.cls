@@ -1333,8 +1333,8 @@
     \unskip\quad\ignorespaces#1\unskip
     \if#2..\quad \else \quad#2 \fi
 }
-\newcommand{\bibemph}[1]{{\em#1}}
-\newcommand{\bibemphic}[1]{{\em#1\/}}
+\newcommand{\bibemph}[1]{{\it#1}}
+\newcommand{\bibemphic}[1]{{\it#1\/}}
 \newcommand{\bibsc}[1]{{\sc#1}}
 \def\@normalcite{%
     \def\@cite##1##2{[##1\if@tempswa , ##2\fi]}%
